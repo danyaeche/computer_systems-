@@ -6,11 +6,23 @@
 
 
 #include <stdio.h>
-define unsigned char *byte_pointer
+
+int main(){
+    int x = 0x89ABCDEF;
+    int y = 0x76543210;
+
+    int lsb = (x & 0xFF);
+    int msb = (y & ~0xFF);
+
+    int val = (lsb | msb);
+
+    printf("%x", val);
+
+    return 0;
+}
 
 
 
 
 
 
-main()
